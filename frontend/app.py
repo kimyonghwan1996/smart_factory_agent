@@ -4,8 +4,10 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime, timedelta
 
+import os
+
 # Constants
-API_BASE_URL = "http://localhost:8000/api"
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000/api")
 
 st.set_page_config(page_title="Smart Factory Agent", layout="wide", page_icon="🏭")
 
